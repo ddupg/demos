@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>ddupg.hbase.demo</groupId>
+  <artifactId>shaded-protobuf</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>protocol-shaded</module>
+    <module>main</module>
+  </modules>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>shaded-protobuf</groupId>
+        <artifactId>protocol-shaded</artifactId>
+        <version>1.0-SNAPSHOT</version>
+      </dependency>
+      <dependency>
+        <groupId>com.xiaomi.infra.thirdparty</groupId>
+        <artifactId>infra-shaded-protobuf</artifactId>
+        <version>1.0.3-SNAPSHOT</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <distributionManagement>
+    <site>
+      <id>hbase.apache.org</id>
+      <name>HBase Website at hbase.apache.org</name>
+      <!-- On why this is the tmp dir and not hbase.apache.org, see
+               https://issues.apache.org/jira/browse/HBASE-7593?focusedCommentId=13555866&page=com.atlassian.jira.plugin.system.issuetabpanels:comment-tabpanel#comment-13555866
+               -->
+      <url>file:///tmp</url>
+    </site>
+    <repository>
+      <id>central</id>
+      <name>artifactory-releases</name>
+      <url>http://artifactory.d.xiaomi.net:80/artifactory/artifactory-releases</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <name>artifactory-snapshots</name>
+      <url>http://artifactory.d.xiaomi.net:80/artifactory/artifactory-snapshots</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+</project>

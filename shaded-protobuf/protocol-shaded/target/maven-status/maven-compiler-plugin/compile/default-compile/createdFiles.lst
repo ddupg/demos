@@ -1,0 +1,10 @@
+org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos$PermissionOrBuilder.class
+org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos.class
+org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos$Permission$1.class
+org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos$Permission$Builder.class
+org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos$Permission$Action.class
+org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos$1.class
+org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos$Permission.class
+org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos$Permission$Type$1.class
+org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos$Permission$Action$1.class
+org/apache/hadoop/hbase/protobuf/generated/AccessControlProtos$Permission$Type.class
