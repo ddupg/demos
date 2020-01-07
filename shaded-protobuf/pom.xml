@@ -4,26 +4,32 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>ddupg.hbase.demo</groupId>
-  <artifactId>shaded-protobuf</artifactId>
+  <groupId>ddupg.demo.shaded</groupId>
+  <artifactId>shaded</artifactId>
   <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
   <modules>
+    <module>shaded-protobuf</module>
     <module>protocol-shaded</module>
     <module>main</module>
   </modules>
 
+  <properties>
+    <protobuf.version>2.5.0</protobuf.version>
+    <compileSource>1.8</compileSource>
+  </properties>
+
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>shaded-protobuf</groupId>
-        <artifactId>protocol-shaded</artifactId>
+        <groupId>ddupg.demo.shaded</groupId>
+        <artifactId>shaded-protobuf</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>
       <dependency>
-        <groupId>com.xiaomi.infra.thirdparty</groupId>
-        <artifactId>infra-shaded-protobuf</artifactId>
-        <version>1.0.3-SNAPSHOT</version>
+        <groupId>ddupg.demo.shaded</groupId>
+        <artifactId>protocol-shaded</artifactId>
+        <version>1.0-SNAPSHOT</version>
       </dependency>
     </dependencies>
   </dependencyManagement>
