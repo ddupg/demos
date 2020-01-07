@@ -47,12 +47,6 @@
               </includes>
               <followSymlinks>false</followSymlinks>
             </fileset>
-            <fileset>
-              <directory>${basedir}</directory>
-              <includes>
-                <include>dependency-reduced-pom.xml</include>
-              </includes>
-            </fileset>
           </filesets>
         </configuration>
       </plugin>
@@ -96,6 +90,19 @@
           <source>${compileSource}</source>
           <target>${compileSource}</target>
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>3.0.1</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar-no-fork</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
       <!--Above we built a jar. Now at package step, do relocation/shade-->
       <plugin>
