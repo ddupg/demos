@@ -1,0 +1,5 @@
+*.iml
+.idea
+shaded-protobuf/src
+*/target
+*/dependency-reduced-pom.xml
