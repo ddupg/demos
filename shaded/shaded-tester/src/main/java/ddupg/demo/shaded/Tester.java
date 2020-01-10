@@ -11,8 +11,5 @@ public class Tester {
         Protocol newProtocol = Protocol.parseFrom(bytes);
 
         System.out.println(protocol.equals(newProtocol));
-        System.out.println(protocol.getType().equals(newProtocol.getType()));
-        System.out.println(protocol.getKey().equals(newProtocol.getKey()));
-        System.out.println(protocol.getValue().equals(newProtocol.getValue()));
     }
 }
