@@ -10,8 +10,8 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>shaded-protobuf</module>
-    <module>protocol-shaded</module>
-    <module>main</module>
+    <module>shaded-protocol</module>
+    <module>shaded-tester</module>
   </modules>
 
   <properties>
@@ -31,12 +31,12 @@
       </dependency>
       <dependency>
         <groupId>ddupg.demo.shaded</groupId>
-        <artifactId>protocol-shaded</artifactId>
+        <artifactId>shaded-protocol</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>
       <dependency>
         <groupId>ddupg.demo.shaded</groupId>
-        <artifactId>main</artifactId>
+        <artifactId>shaded-tester</artifactId>
         <version>1.0-SNAPSHOT</version>
       </dependency>
     </dependencies>

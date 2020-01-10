@@ -1,0 +1,17 @@
+
+option java_package = "ddupg.demo.shaded.protobuf.generated";
+option java_outer_classname = "ProtocolProtos";
+option java_generic_services = true;
+option java_generate_equals_and_hash = true;
+option optimize_for = SPEED;
+
+message Protocol {
+    enum Type {
+        Add = 1;
+        Mod = 2;
+        Delete = 3;
+    }
+    required Type type = 1;
+    required string key = 2;
+    required string value = 3;
+}

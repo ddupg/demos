@@ -9,7 +9,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>protocol-shaded</artifactId>
+  <artifactId>shaded-protocol</artifactId>
   <properties>
     <maven.javadoc.skip>true</maven.javadoc.skip>
     <os.maven.version>1.5.0.Final</os.maven.version>
@@ -106,7 +106,7 @@
           <replacements>
             <replacement>
               <token>([^\.])com.google.protobuf</token>
-              <value>$1ddupg.demo.thirdparty.com.google.protobuf</value>
+              <value>$1org.apache.hbase.thirdparty.com.google.protobuf</value>
             </replacement>
             <!--<replacement>-->
               <!--<token>(public)(\W+static)?(\W+final)?(\W+class)</token>-->
@@ -138,7 +138,7 @@
               <relocations>
                 <relocation>
                   <pattern>com.google.protobuf</pattern>
-                  <shadedPattern>ddupg.demo.thirdparty.com.google.protobuf</shadedPattern>
+                  <shadedPattern>org.apache.hbase.thirdparty.com.google.protobuf</shadedPattern>
                 </relocation>
               </relocations>
               <artifactSet>
@@ -159,7 +159,6 @@
                   <exclude>org.slf4j:slf4j-api</exclude>
                   <exclude>org.apache.yetus:audience-annotations</exclude>
                   <exclude>com.github.stephenc.fingbugs:*</exclude>
-                  <exclude></exclude>
                 </excludes>
               </artifactSet>
             </configuration>
@@ -178,8 +177,9 @@
           will get bundled-->
     <!-- Intra-project dependencies -->
     <dependency>
-      <groupId>ddupg.demo.shaded</groupId>
-      <artifactId>shaded-protobuf</artifactId>
+      <groupId>org.apache.hbase.thirdparty</groupId>
+      <artifactId>hbase-shaded-protobuf</artifactId>
+      <version>3.1.1</version>
     </dependency>
   </dependencies>
 </project>
