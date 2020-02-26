@@ -1,0 +1,20 @@
+syntax="proto3";
+
+package ddupg.demo.hbase.rpc;
+
+option java_outer_classname = "ClientProtos";
+
+message GetRequest {
+    string row = 1;
+}
+
+message GetResponse {
+    string row = 1;
+    string value = 2;
+}
+
+service ClientService {
+
+    rpc Get (GetRequest) returns (GetResponse);
+
+}
