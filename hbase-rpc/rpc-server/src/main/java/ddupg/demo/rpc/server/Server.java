@@ -1,5 +1,7 @@
 package ddupg.demo.rpc.server;
 
+import ddupg.demo.hbase.rpc.ClientProtos;
+
 public class Server {
 
   private ServerRpcServices rpcServices;
@@ -15,5 +17,9 @@ public class Server {
 
   private void run() {
 
+  }
+
+  public ClientProtos.GetResponse get(ClientProtos.GetRequest get) {
+    return ClientProtos.GetResponse.newBuilder().setRow(get.getRow()).setValue("value").build();
   }
 }

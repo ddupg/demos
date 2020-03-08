@@ -14,6 +14,7 @@ public class ServerRpcServices implements ClientProtos.ClientService.BlockingInt
 
   @Override
   public ClientProtos.GetResponse get(RpcController controller, ClientProtos.GetRequest request) throws ServiceException {
-    return null;
+    ClientProtos.GetResponse response = server.get(request);
+    return response;
   }
 }
