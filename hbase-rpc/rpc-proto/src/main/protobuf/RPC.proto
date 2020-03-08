@@ -1,0 +1,14 @@
+syntax="proto3";
+
+package ddupg.demo.hbase.rpc;
+
+option java_outer_classname = "RPCProtos";
+option java_generic_services = true;
+option java_generate_equals_and_hash = true;
+option optimize_for = SPEED;
+
+message ResponseHeader {
+    bool success = 1;
+    uint32 call_id = 2;
+    string err_msg = 3;
+}

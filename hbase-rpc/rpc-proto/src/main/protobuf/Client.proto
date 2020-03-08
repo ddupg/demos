@@ -3,6 +3,9 @@ syntax="proto3";
 package ddupg.demo.hbase.rpc;
 
 option java_outer_classname = "ClientProtos";
+option java_generic_services = true;
+option java_generate_equals_and_hash = true;
+option optimize_for = SPEED;
 
 message GetRequest {
     string row = 1;
@@ -14,7 +17,5 @@ message GetResponse {
 }
 
 service ClientService {
-
     rpc Get (GetRequest) returns (GetResponse);
-
 }
